@@ -15,12 +15,12 @@ function AddPage(props){
 
   useEffect(()=>{
     if(props.match.params.id){
-      setTitleDefault(props.history.location.state.notes.title);
-      setDescDefault(props.history.location.state.notes.desc)
+      setTitle(props.history.location.state.notes.title);
+      setDesc(props.history.location.state.notes.desc)
       setIsLoading(false)
     }else{
-      setTitleDefault(" ");
-      setDescDefault(" ");
+      setTitle(" ");
+      setDesc(" ");
       setIsLoading(false);
     }
   },[])
@@ -64,7 +64,7 @@ function AddPage(props){
                     <Grid item xs={11} sm={11}>
                       <TextField
                       id="title"
-                      defaultValue={titleDefault}
+                      value={title}
                       label="Enter Title"
                       variant="outlined"
                       color="secondary"
@@ -82,7 +82,7 @@ function AddPage(props){
                       variant="outlined"
                       color="secondary"
                       placeholder="Enter Notes"
-                      defaultValue={descDefault}
+                      value={desc}
                       helperText="Please Write Notes Here"
                       error={false}
                       disabled={isDisable}
