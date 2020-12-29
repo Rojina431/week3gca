@@ -11,8 +11,10 @@ import { useState,useEffect } from 'react';
 import { deleteNotes, getNotes } from './function';
 const useStyles=makeStyles({
     root:{
-        width:"95%",
-        margin:20, 
+        width:"90%",
+        marginTop:30,
+        marginLeft:'5%', 
+        marginRight:"5%"
     },
     icon:{
         margin:20,

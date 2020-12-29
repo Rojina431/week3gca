@@ -7,8 +7,6 @@ import { withRouter} from 'react-router-dom';
 function AddPage(props){
   const[title,setTitle]=useState(" ");
   const[desc,setDesc]=useState(" ");
-  const [titleDefault,setTitleDefault]=useState(" ")
-  const [descDefault,setDescDefault]=useState(" ")
   const [isLoading,setIsLoading]=useState(true)
   const [isDisable,setIsDisable]=useState(false)
   const history=useHistory();
